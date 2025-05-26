@@ -28,10 +28,10 @@ function draw() {
   image(video, 0, 0, width, height);
 
   // 臉部偵測，鼻子處畫圓
-  if (facePredictions.length > 0) {
+   if (facePredictions.length > 0) {
     const keypoints = facePredictions[0].scaledMesh;
-    // 通常第4點是鼻尖
-    const [x, y] = keypoints[4];
+    // 通常第1點（索引0）是鼻尖
+    const [x, y] = keypoints[1]; // 或 keypoints[0]，可嘗試兩者
     noFill();
     stroke(0, 0, 255);
     strokeWeight(4);
