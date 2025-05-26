@@ -31,7 +31,7 @@ function draw() {
    if (facePredictions.length > 0) {
     const keypoints = facePredictions[0].scaledMesh;
     // 通常第1點（索引0）是鼻尖
-    const [x, y] = keypoints[1]; // 或 keypoints[0]，可嘗試兩者
+    const [x, y] = keypoints[0]; // 或 keypoints[0]，可嘗試兩者
     noFill();
     stroke(0, 0, 255);
     strokeWeight(4);
